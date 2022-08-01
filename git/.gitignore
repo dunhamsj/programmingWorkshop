@@ -1,0 +1,4 @@
+# Here go any files you do not want tracked by git,
+# e.g., data files, auxiliary latex files, .DS_Store, etc.
+
+*.DS_Store
