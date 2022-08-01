@@ -1,0 +1,17 @@
+# .bash_profile
+
+# If $HOME/.bash_aliases exists, run it
+if [ -f $HOME/.bash_aliases ]; then . $HOME/.bash_aliases; fi
+
+# Get full hostname, including domain (i.e., Fully Qualified Domain Name)
+export FQDN=$( hostname -f )
+
+## Get computing facility name (e.g. OLCF, ACCRE )
+if   [[ $FQDN = *"ornl.gov" ]]; then export FACILITY="olcf"
+elif [[ $FQDN = "gw"*       ]]; then export FACILITY="accre"
+elif [[ $FQDN = *"utk.edu"  ]]; then export FACILITY="nics"
+else                                 export FACILITY="local"
+fi
+
+# If ~/.bashrc.$FACILITY exists, run it
+if [ -f $HOME/.bashrc.$FACILITY ]; then . $HOME/.bashrc.$FACILITY; fi

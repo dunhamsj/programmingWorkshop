@@ -1,0 +1,4 @@
+# .bashrc
+
+# If $HOME/.bash_profile exists, run it
+if [ -f $HOME/.bash_profile ]; then . $HOME/.bash_profile; fi

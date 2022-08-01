@@ -1,0 +1,90 @@
+# .bashrc.local
+
+alias ls='ls -GF'
+
+alias j='julia'
+alias python='python3'
+alias p='python'
+alias p2='python2'
+alias n='nano -T 4 -E'
+alias jnb='jupyter notebook'
+alias top='top -o cpu'
+alias stdsize='resize -s 24 80'
+
+alias sioyek='/Applications/sioyek.app/Contents/MacOS/sioyek'
+alias opdf=sioyek
+
+# External machines
+alias summit='ssh -x dunhamsj@summit.olcf.ornl.gov'
+alias vpac='ssh -YC dunhamsj@vpac01.phy.vanderbilt.edu'
+alias accre='ssh -x dunhamsj@login.accre.vanderbilt.edu'
+alias isaac='ssh -x sdunham6@acf-login.acf.utk.edu'
+alias ascent='ssh -x sjdunham@login1.ascent.olcf.ornl.gov'
+alias fedora='ssh -x kkadoogan@fedora.local'
+
+# thornado
+alias qv='cd ~/Work/Analysis'
+alias ni='cd ${THORNADO_DIR}/SandBox/dgExperiments_Euler_NonRelativistic_IDEAL/Executables/'
+alias nt='cd ${THORNADO_DIR}/SandBox/dgExperiments_Euler_NonRelativistic_TABLE/Executables/'
+alias ri='cd ${THORNADO_DIR}/SandBox/dgExperiments_Euler_Relativistic_IDEAL/Executables/'
+alias rt='cd ${THORNADO_DIR}/SandBox/dgExperiments_Euler_Relativistic_TABLE/Executables/'
+alias gc='cd ${THORNADO_DIR}/SandBox/GravitationalCollapse_CFA/Executables/'
+alias wf='cd ${THORNADO_DIR}/Workflow/AMReX'
+alias rmout='find ../Output/ -name "*.h5" -delete && rm -f ../Output/.EulerTally.dat && rm -f ../Output/.ProgramHeader && find ../Output/ -name "*.dat" -delete'
+alias rmamrex='rm -rf thornado_* plt_* chk* Backtrace.* out*'
+alias thornado='. ${THORNADO_DIR}/Workflow/SetEnvironment.sh sjdunham'
+alias weaklib='. ${WEAKLIB_DIR}/Distributions/Workflow/SetEnvironment.sh sjdunham'
+
+# AMReX
+alias amrex='cd ${THORNADO_DIR}/SandBox/AMReX/Euler_Relativistic_IDEAL'
+
+# HEDGS
+alias hedgs='cd ${HEDGS_HOME}/exe'
+alias rmplt='rm -f ${HEDGS_HOME}/Output/plt*'
+
+# poissolv
+alias poi='cd ${POISSOLV_HOME}/exe'
+
+# Remove zsh line when opening Terminal
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Set path variable for PETSc directory
+export PETSC_DIR=${HOME}/Work/Codes/petsc
+
+# Set path variable for PETSc ARCH directory
+export PETSC_ARCH=arch-darwin-c-debug
+
+# Set path variable for poseidon directory
+export POSEIDON_DIR=${HOME}/Work/Codes/poseidon
+
+# Set path variable for MPI/MPICH
+export MPICH_DIR=/usr/local/Cellar/mpich/4.0_2
+
+# Set path variable for thornado directory
+export THORNADO_DIR=${HOME}/Work/Codes/thornado
+
+# Set path variable for weaklib directory
+export WEAKLIB_DIR=${HOME}/Work/Codes/weaklib
+
+# Set path variable for AMReX directory
+export AMREX_DIR=${HOME}/Work/Codes/amrex
+
+# Set path variable for poissolv directory
+export POISSOLV_HOME=${HOME}/Work/Codes/poissolv
+
+# Set path variable for HEDGS directory
+export HEDGS_HOME=${HOME}/Work/Codes/hedgs
+
+# Set path variable for HDF5 directory
+export HDF5_DIR=/usr/local/Cellar/hdf5/1.12.2
+
+# Set path variable for LAPACK directory
+export LAPACK_DIR=/usr/local/Cellar/lapack/3.10.1
+
+# Changing default prompt
+export PS1='\h:$(echo $(dirname \w)|sed -e "s;\(/.\)[^/]*;\1;g")/$(basename \w) $ '
+
+export GREP_OPTIONS='--color=always'
+
+# Force brew's version of bison to be used
+export PATH="/usr/local/opt/bison/bin:$PATH"
