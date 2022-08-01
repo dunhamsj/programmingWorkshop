@@ -1,0 +1,13 @@
+1.) Getting an account on ACCRE
+a. Complete steps 1, 2, and 3 from
+https://www.vanderbilt.edu/accre/getting-started/
+  - For Group, use "Astronomy Bridge Group (bridge)"
+
+2.) Practice with Unix
+a. Find a file with cereal in its name
+   (hint: it’s in a vpac01 directory involving /astro1/bootcamp2022...)
+b. Copy it to your home directory on vpac01, add your name to the filename,
+   and change permissions so that you can read and write to it,
+   but group/other can only read it
+c. Write the name of your favorite cereal in the file
+d. Copy it to this directory: /astro1/bootcamp2022/putCerealFileHere/

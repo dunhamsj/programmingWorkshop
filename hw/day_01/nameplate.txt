@@ -1,0 +1,5 @@
+1.) Make a nameplate with Keynote
+
+2.) print it out on the 9th floor printer
+
+3.) Download XQuartz
