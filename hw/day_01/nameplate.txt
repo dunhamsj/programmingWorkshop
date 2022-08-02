@@ -1,5 +1,7 @@
-1.) Make a nameplate with Keynote
+1.) Make a nameplate with Keynote/OpenOffice/LibreOffice/Microsoft Office
+  - a nameplate is just an 8x11 sheet with your name in large font and
+    optional decorations
 
-2.) print it out on the 9th floor printer
+2.) Print it out on the 9th floor printer
 
 3.) Download XQuartz
